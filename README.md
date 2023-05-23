@@ -4,6 +4,8 @@
 
 ## Necessary links
 - [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
-- [Countries API](https://restcountries.com)
+- [Netflix API](https://rapidapi.com/Glavier/api/netflix54/)
 - [AJAX XMLHttpRequest Object](https://www.w3schools.com/js/js_ajax_http.asp)
 - [HTTP Status](https://httpstatusdogs.com/)
+
+## ChatGPT used for debugging :-)
