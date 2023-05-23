@@ -2,20 +2,22 @@ function showMovies(){
 
     let data = null;
 
-    //Creating object
+    //Creating object to make requests
     let xhr = new XMLHttpRequest();
 
+    //Include the relevant credentials with the AJAX request
     xhr.withCredentials = true;
 
-    xhr.addEventListener('readystatechange', function () {
-        if (this.readyState === this.DONE) {
+    //Call back function with response
+    xhr.onload = function() {
+        if (xhr.status === 200) {
             console.log("Success");
 
             try{
                 //Save response to movies variable
                 let response = JSON.parse(this.responseText);
 
-                //Gte array name
+                //Get array name
                 movies = response['titles'];
 
                 //Loop through the movies array
@@ -33,7 +35,7 @@ function showMovies(){
             }
 
         }
-    });
+    }
 
     //Send a request to the server
     xhr.open('GET', 'https://netflix54.p.rapidapi.com/search/?query=stranger&offset=0&limit_titles=50&limit_suggestions=20&lang=en');
